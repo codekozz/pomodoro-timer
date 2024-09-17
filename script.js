@@ -77,6 +77,15 @@ for (let item of optionsButton) {
     });
 }
 
+resetButton.addEventListener('click', function() {
+    minutes = numberStart;
+    seconds = 1;
+    timer.textContent = `${minutes}:00`;
+
+    startButton.textContent = 'start'
+    clearInterval(timerId);
+});
+
 function optionsChange(item) {
 
     if (item.textContent === 'Pomodoro') {
